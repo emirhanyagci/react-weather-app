@@ -1,8 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   body {
-    @apply bg-mainLayout bg-cover;
+    @apply min-h-svh bg-mainLayout bg-cover bg-center bg-no-repeat font-nunito text-base-white;
+  }
+
+  @font-face {
+    font-family: "nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../public/fonts/Nunito-Regular.ttf) format("ttf");
+  }
+}
+@layer utilities {
+  .heading-hg {
+    @apply text-8xl font-extrabold leading-[100%];
+  }
+  .heading-xl {
+    @apply text-5xl font-extrabold leading-[120%];
+  }
+  .heading-lg {
+    @apply text-[2rem] font-bold leading-[140%];
+  }
+  .heading-md {
+    @apply text-xl font-bold leading-[140%];
+  }
+  .heading-sm {
+    @apply text-base font-bold leading-[140%];
+  }
+  .heading-xs {
+    @apply text-sm font-bold leading-[140%];
+  }
+  .text-lg {
+    @apply text-xl leading-[140%];
+  }
+  .text-md {
+    @apply text-base leading-[140%];
+  }
+  .text-sm {
+    @apply text-sm leading-[140%];
+  }
+  .text-xs {
+    @apply text-xs leading-[140%];
   }
 }
