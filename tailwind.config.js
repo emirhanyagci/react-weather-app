@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,9 +11,9 @@ export default {
         todayResultLight: "url('v/images/todayResultLight.png')",
       },
       colors: {
-        baseBlueLight: "#8FB2F5",
         base: {
           white: "#FFFFFF",
+          blue: "#8FB2F5",
           100: "#FAFAFA",
           200: "#BFBFD4",
           300: "#ABABC4",
@@ -26,7 +26,7 @@ export default {
         },
       },
       fontFamily: {
-        nunito: ["nunito", ...defaultTheme.fontFamily.sans],
+        nunitoBold: ["nunitoBold", ...defaultTheme.fontFamily.sans],
       },
     },
   },
