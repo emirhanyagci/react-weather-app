@@ -16,6 +16,18 @@
     src: url(../public/fonts/Nunito-Bold.ttf) format("ttf");
   } */
 }
+@layer components {
+  .inputSpinner {
+    @apply fill-white;
+  }
+  /* 
+  @font-face {
+    font-family: "nunitoBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../public/fonts/Nunito-Bold.ttf) format("ttf");
+  } */
+}
 @layer utilities {
   .heading-hg {
     @apply text-8xl font-extrabold leading-[100%];

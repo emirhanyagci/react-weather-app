@@ -7,8 +7,10 @@ const searchStyle = {
     boxShadow: "none",
     outline: "none ",
     border: "none",
-    height: "3rem",
+    padding: "0rem .5rem",
+    height: "56px",
     borderRadius: ".5rem",
+    overflow: "hidden",
     backgroundColor: colors[700],
   }),
   menu: (styles) => ({
@@ -29,6 +31,9 @@ const searchStyle = {
   option: (styles, { isFocused }) => {
     return {
       ...styles,
+      height: "48px",
+      display: "flex",
+      alignItems: "center",
       cursor: "pointer",
       backgroundColor: isFocused ? colors[400] : colors[500],
       ":active": {

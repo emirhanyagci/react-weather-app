@@ -1,6 +1,6 @@
 import AsyncSelect from "react-select/async";
 import searchStyle from "./searchStyle";
-
+import SpinnerMini from "../SpinnerMini";
 const options = [
   { value: "chocolate", label: "Chocolate" },
   { value: "strawberry", label: "Strawberry" },
@@ -11,7 +11,7 @@ const loadOptions = (inputValue, callback) => {
     callback(options);
   }, 1000);
 };
-
+const LoadingIndicator = (props) => <SpinnerMini {...props}></SpinnerMini>;
 export default function Search() {
   return (
     <AsyncSelect
@@ -22,6 +22,7 @@ export default function Search() {
       components={{
         DropdownIndicator: () => null,
         IndicatorSeparator: () => null,
+        LoadingIndicator,
       }}
       loadOptions={loadOptions}
       defaultOptions
