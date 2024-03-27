@@ -2,7 +2,10 @@ import AsyncSelect from "react-select/async";
 import searchStyle from "./searchStyle";
 import SpinnerMini from "../SpinnerMini";
 import { getCities } from "../../service/cityApi";
-import { getCurrentWeather } from "../../service/weatherApi";
+import {
+  getCurrentWeather,
+  getForecastWeather,
+} from "../../service/weatherApi";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useWeatherContext } from "../../context/WeatherContext";
@@ -27,10 +30,13 @@ export default function Search() {
   };
   async function onChangeHandler(selectedValue) {
     const currentWeather = getCurrentWeather(selectedValue.value);
-    Promise.all([currentWeather]).then(([currentWeather]) => {
-      setWeatherData({ currentWeather });
-      navigate("/weather");
-    });
+    const forecastWeather = getForecastWeather(selectedValue.value);
+    Promise.all([currentWeather, forecastWeather]).then(
+      ([currentWeather, forecastWeather]) => {
+        setWeatherData({ currentWeather, forecastWeather });
+        navigate("/weather");
+      },
+    );
   }
   return (
     <AsyncSelect
