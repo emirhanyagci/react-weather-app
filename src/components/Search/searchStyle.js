@@ -1,6 +1,5 @@
 import config from "../../../tailwind.config.js";
 const colors = config.theme.extend.colors.base;
-console.log(colors);
 const searchStyle = {
   control: (styles) => ({
     ...styles,
