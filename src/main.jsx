@@ -11,3 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </React.StrictMode>,
 );
+// TODO : set isLoading prop when weather data fetching and disable it
+// TODO : weather tab ui
+// TODO : Geolocation API
+// TODO : error handling
