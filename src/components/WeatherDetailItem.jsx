@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function WeatherDetailItem({ label, value, icon }) {
   return (
     <li className="flex items-center justify-between border-b-[1px] border-b-base-700 py-4 last:border-none">
@@ -9,3 +11,9 @@ export default function WeatherDetailItem({ label, value, icon }) {
     </li>
   );
 }
+
+WeatherDetailItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
