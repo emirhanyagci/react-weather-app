@@ -4,12 +4,11 @@ import { weatherIcons, weatherBackground } from "../utils/imageById";
 import { isDay } from "../utils/helpers";
 export default function WeatherCurrent() {
   const { weatherData } = useWeatherContext();
-  console.log(weatherData);
   const { city, countryCode } = weatherData.city;
-  const { weather, temp, dt } = weatherData.currentWeather.data[0];
-  const { temp_min, temp_max } = weatherData.forecastWeather[0].main;
+  const { weather, temp, dt } = weatherData.currentWeather;
+  const { min, max } = weatherData.forecastWeather[0].temp;
   const date = new Date(dt * 1000).toDateString().replaceAll(" ", " , ");
-  const timezoneOffset = weatherData.currentWeather.timezone_offset;
+  const timezoneOffset = weatherData.timezoneOffset;
   const period = isDay(timezoneOffset) ? "day" : "night";
   const iconId = weather[0].icon.slice(0, -1);
   const backgroundUrl = weatherBackground[iconId][period];
@@ -31,7 +30,7 @@ export default function WeatherCurrent() {
             <div className="heading-xl">{Math.round(temp)}ºc</div>
             <div className="flex flex-col">
               <span className="heading-sm">
-                {Math.round(temp_max)}ºc / {Math.round(temp_min)}ºc
+                {Math.round(max)}ºc / {Math.round(min)}ºc
               </span>
               <span className="text-small">{weather[0].main}</span>
             </div>

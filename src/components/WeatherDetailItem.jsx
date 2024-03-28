@@ -14,6 +14,9 @@ export default function WeatherDetailItem({ label, value, icon }) {
 
 WeatherDetailItem.propTypes = {
   label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
   icon: PropTypes.string.isRequired,
 };

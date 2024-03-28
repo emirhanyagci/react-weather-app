@@ -5,7 +5,7 @@ import WeatherDetailItem from "./WeatherDetailItem";
 export default function WeatherDetails() {
   const { weatherData } = useWeatherContext();
   const { feels_like, clouds, wind_speed, humidity, uvi } =
-    weatherData.currentWeather.data[0];
+    weatherData.currentWeather;
 
   return (
     <CardContainer py={false}>

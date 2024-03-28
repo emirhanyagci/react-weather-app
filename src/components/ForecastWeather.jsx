@@ -1,11 +1,14 @@
+import { useWeatherContext } from "../context/WeatherContext";
 import CardContainer from "./CardContainer";
 import ForecastWeatherItem from "./ForecastWeatherItem";
 export default function ForecastWeather() {
+  const { weatherData } = useWeatherContext();
+  const forecastWeather = weatherData.forecastWeather;
   return (
     <CardContainer>
       <ul className="flex justify-around">
-        {Array.from({ length: 5 }, (v, i) => i).map((item, index) => (
-          <ForecastWeatherItem key={index} />
+        {forecastWeather.map((forecastData, index) => (
+          <ForecastWeatherItem data={forecastData} key={index} />
         ))}
       </ul>
     </CardContainer>
