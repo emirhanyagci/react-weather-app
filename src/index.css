@@ -17,9 +17,6 @@
   } */
 }
 @layer components {
-  .inputSpinner {
-    @apply fill-white;
-  }
   /* 
   @font-face {
     font-family: "nunitoBold";
@@ -53,10 +50,10 @@
   .text-md {
     @apply text-base leading-[140%];
   }
-  .text-s {
+  .text-small {
     @apply text-sm leading-[140%];
   }
-  .text-xs {
+  .text-xsmall {
     @apply text-xs leading-[140%];
   }
 }

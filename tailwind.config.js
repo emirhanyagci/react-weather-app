@@ -8,7 +8,7 @@ export default {
       backgroundImage: {
         mainLayout: "url('/images/mainLayout.png')",
         todayResultDark: "url('/images/todayResultDark.png')",
-        todayResultLight: "url('v/images/todayResultLight.png')",
+        todayResultLight: "url('/images/todayResultLight.png')",
       },
       colors: {
         base: {
