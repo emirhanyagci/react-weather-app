@@ -14,7 +14,8 @@ export async function getCurrentWeather({ lat, lon }) {
   };
   let response;
   try {
-    response = (await axios(options)).data.data[0];
+    response = (await axios(options)).data;
+    console.log(response);
   } catch (err) {
     toast.error(err.response.data.message);
   }
@@ -26,6 +27,7 @@ export async function getForecastWeather({ lat, lon }) {
     url: "https://api.openweathermap.org/data/2.5/forecast",
     params: {
       units: "metric",
+
       lat,
       lon,
       appid: weatherApiKey,

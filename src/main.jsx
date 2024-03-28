@@ -13,6 +13,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 // TODO : add route protect to /weather path
 // TODO : font/text control
-// TODO : weather tab ui
 // TODO : Geolocation API
 // TODO : error handling

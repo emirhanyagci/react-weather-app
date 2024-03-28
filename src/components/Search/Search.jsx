@@ -23,7 +23,7 @@ export default function Search() {
       const cities = await getCities(inputValue);
       const filteredCities = cities.map((city) => {
         return {
-          value: { lat: city.latitude, lon: city.longitude },
+          value: { lat: city.latitude, lon: city.longitude, city },
           label: `${city.city} - ${city.countryCode}`,
         };
       });
@@ -35,9 +35,10 @@ export default function Search() {
     setIsFetching(true);
     const currentWeather = getCurrentWeather(selectedValue.value);
     const forecastWeather = getForecastWeather(selectedValue.value);
+    const { city } = selectedValue.value;
     Promise.all([currentWeather, forecastWeather])
       .then(([currentWeather, forecastWeather]) => {
-        setWeatherData({ currentWeather, forecastWeather });
+        setWeatherData({ city, currentWeather, forecastWeather });
         navigate("/weather");
       })
       .finally(() => {
