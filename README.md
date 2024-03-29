@@ -1,11 +1,11 @@
 # Emirhan Yagci React Weather App
 
 
-## SETUP
+## Setup
 
 - Create `.env.local` file and fill in parallel with  [`.env.local.example`]([https://pages.github.com/](https://github.com/emirhanyagci/react-weather-app/blob/main/.env.local.example))
 
-## START
+## Start
 With NPM:
 
 ```
@@ -34,8 +34,12 @@ $ yarn dev
 - Responsive
 - Hava Durumu İkonları
 
-## Learn More
+## Tech Stack
 
 - [GeoDB API](https://rapidapi.com/wirefreethought/api/geodb-cities)
 - [OpenWeather API](https://openweathermap.org/)
 - [React Select](https://react-select.com/home)
+- [Toasts](https://react-hot-toast.com/)
+- [Axios](https://axios-http.com/)
+- [React Router](https://reactrouter.com/en/main)
+- [Tailwind](https://tailwindcss.com/)
