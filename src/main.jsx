@@ -11,8 +11,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </React.StrictMode>,
 );
-// TODO : add route protect to /weather path
-// TODO : font/text control
+
 // TODO : Geolocation API
-// TODO : error handling
-// add navigate button to home

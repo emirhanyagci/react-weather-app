@@ -30,6 +30,7 @@ export default function Search() {
       setIsFetching(false);
     }, 1000);
   };
+
   async function onChangeHandler(selectedValue) {
     setIsFetching(true);
 
