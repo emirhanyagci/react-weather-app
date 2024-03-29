@@ -17,7 +17,7 @@ export async function getWeather({ lat, lon }) {
   try {
     response = (await axios(options)).data;
   } catch (err) {
-    toast.error(err.response.data.message);
+    toast.error(err.message);
   }
   return response;
 }

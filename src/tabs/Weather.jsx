@@ -10,7 +10,7 @@ export default function Weather() {
   console.log(weatherData);
   const navigate = useNavigate();
   useEffect(() => {
-    if (!weatherData) navigate("/");
+    if (!weatherData?.currentWeather) navigate("/");
   }, []);
 
   return (
