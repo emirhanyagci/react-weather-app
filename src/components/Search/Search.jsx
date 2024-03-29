@@ -1,4 +1,5 @@
 import AsyncSelect from "react-select/async";
+import { components } from "react-select";
 import searchStyle from "./searchStyle";
 import SpinnerMini from "../SpinnerMini";
 import { getCities } from "../../service/cityApi";
@@ -7,6 +8,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useWeatherContext } from "../../context/WeatherContext";
 const LoadingIndicator = (props) => <SpinnerMini {...props}></SpinnerMini>;
+const Input = (props) => <components.Input {...props} maxLength={30} />;
 
 export default function Search() {
   const timeoutRef = useRef(null);
@@ -57,6 +59,7 @@ export default function Search() {
         DropdownIndicator: () => null,
         IndicatorSeparator: () => null,
         LoadingIndicator,
+        Input,
       }}
       onChange={onChangeHandler}
       loadOptions={loadOptions}

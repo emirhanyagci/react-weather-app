@@ -3,7 +3,7 @@ import Logo from "../components/Logo";
 import Search from "../components/Search/Search";
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center  ">
+    <section className="flex flex-col items-center justify-center">
       <div>
         <Logo />
       </div>

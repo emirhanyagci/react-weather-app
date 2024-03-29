@@ -6,6 +6,7 @@ const searchStyle = {
     boxShadow: "none",
     outline: "none ",
     border: "none",
+
     padding: "0rem .5rem",
     height: "56px",
     borderRadius: ".5rem",
@@ -16,7 +17,7 @@ const searchStyle = {
     ...styles,
     backgroundColor: "transparent",
   }),
-  input: (styles) => ({ ...styles, color: colors[100] }),
+  input: (styles) => ({ ...styles, color: colors[100], width: "200px" }),
   menuList: (styles) => ({
     ...styles,
     borderRadius: ".5rem",

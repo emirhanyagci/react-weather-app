@@ -15,3 +15,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 // TODO : font/text control
 // TODO : Geolocation API
 // TODO : error handling
+// add navigate button to home

@@ -4,6 +4,7 @@ import ForecastWeather from "../components/ForecastWeather";
 import WeatherCurrent from "../components/WeatherCurrent";
 import WeatherDetails from "../components/WeatherDetails";
 import { useWeatherContext } from "../context/WeatherContext";
+import NavigateButton from "../components/NavigateButton";
 
 export default function Weather() {
   const { weatherData } = useWeatherContext();
@@ -14,7 +15,9 @@ export default function Weather() {
   }, []);
 
   return (
-    <section className="space-y-2">
+    <section className="relative space-y-2">
+      <NavigateButton />
+
       {weatherData ? (
         <>
           <WeatherCurrent />

@@ -11,7 +11,7 @@ function App() {
       <WeatherContextProvider>
         <Routes>
           <Route path="/" element={<MainLayout />}>
-            <Route index path="/" element={<Home />}></Route>
+            <Route index element={<Home />}></Route>
             <Route path="/weather" element={<Weather />}></Route>
           </Route>
         </Routes>
