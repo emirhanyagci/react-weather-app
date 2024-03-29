@@ -7,6 +7,7 @@ export default function WeatherCurrent() {
   const { city, countryCode } = weatherData.city;
   const { weather, temp, dt } = weatherData.currentWeather;
   const { min, max } = weatherData.forecastWeather[0].temp;
+
   const date = new Date(dt * 1000).toDateString().replaceAll(" ", " , ");
   const timezoneOffset = weatherData.timezoneOffset;
   const period = isDay(timezoneOffset) ? "day" : "night";

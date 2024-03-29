@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { weatherApiKey } from "./api";
-export async function getWeather({ lat, lon }) {
+export async function getWeather(lat, lon) {
   const options = {
     url: "https://api.openweathermap.org/data/3.0/onecall",
     params: {

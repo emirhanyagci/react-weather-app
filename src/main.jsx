@@ -13,3 +13,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 // TODO : Geolocation API
+// api hatasini bildir istanbulda ilceleri city olark koymuslar

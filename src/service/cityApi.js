@@ -19,3 +19,20 @@ export async function getCities(inputValue = "", limit = 5) {
   }
   return response;
 }
+export async function getCity(lat, lon) {
+  const options = {
+    ...geoApiOptions,
+    url: "https://wft-geo-db.p.rapidapi.com/v1/geo/cities",
+    params: {
+      location: `${lat}+${lon}`,
+      limit: 1,
+    },
+  };
+  let response = [];
+  try {
+    response = (await axios(options)).data.data[0];
+  } catch (err) {
+    toast.error(err.response.data.message);
+  }
+  return response;
+}
