@@ -7,7 +7,7 @@ export async function getCities(inputValue = "", limit = 5) {
     ...geoApiOptions,
     params: {
       namePrefix: inputValue,
-      minPopulation: 1000000,
+      minPopulation: 100000,
       limit,
     },
   };
